@@ -33,7 +33,7 @@ Follow these steps to set up and run AutoGen GraphRAG Local with Ollama and Chai
     #ollama pull llama3
     ollama pull herald/dmeta-embedding-zh
     ollama pull internlm2
-    ollama pull internlm2:7b-chat-1m-v2.5-q8_0
+    ollama pull wangrongsheng/mistral-7b-v0.3-chinese
     ```
 
 2. **Create conda environment and install packages:**
@@ -100,6 +100,14 @@ Follow these steps to set up and run AutoGen GraphRAG Local with Ollama and Chai
     cp ./utils/settings.yaml ./
     ```      
 4. **Replace 'embedding.py' and 'openai_embeddings_llm.py' in the GraphRAG package folder using files from Utils folder:**
+
+    需要找到在graphrag下的对应文件进行替换
+    ```pwsh
+    sudo find / -name openai_embeddings_llm.py
+    sudo find / -name embedding.py
+    ```   
+
+
     ```pwsh
     cp ./utils/openai_embeddings_llm.py .\venv\Lib\site-packages\graphrag\llm\openai\openai_embeddings_llm.py
     cp ./utils/embedding.py .\venv\Lib\site-packages\graphrag\query\llm\oai\embedding.py 
