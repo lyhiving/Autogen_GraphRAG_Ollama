@@ -28,15 +28,19 @@ Follow these steps to set up and run AutoGen GraphRAG Local with Ollama and Chai
     ```bash
     
     ollama serve
-    ollama pull mistral
-    ollama pull nomic-embed-text
-    ollama pull llama3
-    ollama serve
+    #ollama pull mistral
+    #ollama pull nomic-embed-text
+    #ollama pull llama3
+    ollama pull herald/dmeta-embedding-zh
+    ollama pull internlm2
+    ollama pull internlm2:7b-chat-1m-v2.5-q8_0
     ```
 
 2. **Create conda environment and install packages:**
     ```bash
    conda create -n RAG_agents python=3.12
+   source ~/.bashrc 
+   conda init
    conda activate RAG_agents
    git clone https://github.com/karthik-codex/autogen_graphRAG.git
    cd autogen_graphRAG

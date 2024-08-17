@@ -1,10 +1,9 @@
-
 encoding_model: cl100k_base
 skip_workflows: []
 llm:
   api_key: ${GRAPHRAG_API_KEY}
   type: openai_chat # or azure_openai_chat
-  model: mistral
+  model: internlm2
   model_supports_json: true # recommended if this is available for your model.
   # max_tokens: 4000
   # request_timeout: 180.0
@@ -31,7 +30,7 @@ embeddings:
   llm:
     api_key: ${GRAPHRAG_API_KEY}
     type: openai_embedding # or azure_openai_embedding
-    model: nomic_embed_text #text-embedding-3-large  #mxbai-embed-large #
+    model: herald/dmeta-embedding-zh #text-embedding-3-large  #mxbai-embed-large #
     api_base: http://localhost:11434/api
     # api_version: 2024-02-15-preview
     # organization: <organization_id>
