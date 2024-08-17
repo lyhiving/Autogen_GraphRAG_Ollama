@@ -79,8 +79,8 @@ Follow these steps to set up and run AutoGen GraphRAG Local with Ollama and Chai
     Visit [Ollama's website](https://ollama.com/) for installation files.
 
     ```pwsh
-    ollama pull mistral
-    ollama pull nomic-embed-text
+    ollama pull wangrongsheng/mistral-7b-v0.3-chinese
+    ollama pull herald/dmeta-embedding-zh
     ollama pull llama3
     ollama serve
     ```
