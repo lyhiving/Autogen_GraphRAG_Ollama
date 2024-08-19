@@ -45,6 +45,10 @@ Follow these steps to set up and run AutoGen GraphRAG Local with Ollama and Chai
    git clone https://github.com/karthik-codex/autogen_graphRAG.git
    cd autogen_graphRAG
    pip install -r requirements.txt
+   pip uninstall aiofiles graphrag chainlit -y
+   pip install aiofiles==23.1.0
+   pip install chainlit
+   pip install --no-deps graphrag
     ```    
 3. **Initiate GraphRAG root folder:**
     ```bash
@@ -122,5 +126,5 @@ Follow these steps to set up and run AutoGen GraphRAG Local with Ollama and Chai
     ```    
 7. **Run app:**
     ```pwsh
-    chainlit run appUI.py
+    chainlit run appUI.py  --port 6006
     ```                
