@@ -33,6 +33,7 @@ Follow these steps to set up and run AutoGen GraphRAG Local with Ollama and Chai
     #ollama pull llama3
     ollama pull herald/dmeta-embedding-zh
     ollama pull internlm2
+    #ollama pull internlm2:7b-chat-1m-v2.5-q8_0
     ollama pull wangrongsheng/mistral-7b-v0.3-chinese
     ```
 
@@ -67,11 +68,11 @@ Follow these steps to set up and run AutoGen GraphRAG Local with Ollama and Chai
     ```         
 6. **Start Lite-LLM proxy server:**
     ```bash
-    litellm --model ollama_chat/llama3
+    litellm --model internlm2:7b-chat-1m-v2.5-q8_0
     ```    
 7. **Run app:**
     ```bash
-    chainlit run appUI.py
+    chainlit run appUI.py --port 6006
     ```                
 
 ## 📦 Installation and Setup Windows
